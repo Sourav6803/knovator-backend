@@ -32,6 +32,9 @@ exports.createJob = async (req, res) => {
     }
 
     const imageFile = req.file;
+
+    console.log(imageFile);
+    console.log(req.body);
     
     if (!imageFile) {
       return res.status(400).json({ message: "Image file is required" });
