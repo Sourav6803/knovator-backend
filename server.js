@@ -17,12 +17,11 @@ cloudinary.config({
 const app = express();
 // app.use(cors());
 app.use(cors({
-    origin: ['https://knovator-frontend.vercel.app/', 'http://localhost:3000'],
-    credentials: true
+    origin: ['https://knovator-frontend.vercel.app'],
 }))
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(multer().any());
 
 const storage = multer.memoryStorage();
 exports.upload = multer({ storage });
